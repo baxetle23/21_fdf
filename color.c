@@ -17,3 +17,11 @@ int	get_color(int min, int max, float z)
 	else
 		return (ft_get_color_by_serg(0, 0, 255 * z_otn, 255 - 255 * z_otn));
 }
+
+void	round_(int key, t_arr *arr)
+{
+	if (key == 15)
+		round_y(key, arr);
+	if (key == 14)
+		round_x(key, arr);
+}

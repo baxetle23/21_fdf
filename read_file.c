@@ -94,4 +94,5 @@ void	init_flags(t_arr *arr)
 	arr->zoom = 30;
 	arr->hight = 1;
 	arr->draw_iso = 0;
+	arr->povorot_y = 0;
 }

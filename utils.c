@@ -20,3 +20,37 @@ float	max_mod(float a, float b)
 	else
 		return (mod(b));
 }
+
+void	round_y(int key, t_arr *arr)
+{
+	int		i;
+	t_point	tmp;
+
+	mlx_clear_window(arr->mlx_ptr, arr->win_ptr);
+	i = 0;
+	while (i < arr->size)
+	{
+		tmp = arr->ptr[i];
+		arr->ptr[i].x = tmp.x * cos(0.1) + tmp.z * sin(0.1);
+		arr->ptr[i].z = -arr->ptr[i].x * sin(0.1) + arr->ptr[i].z * cos(0.1);
+		i++;
+	}
+	draw(arr);
+}
+
+void	round_x(int key, t_arr *arr)
+{
+	int		i;
+	t_point	tmp;
+
+	mlx_clear_window(arr->mlx_ptr, arr->win_ptr);
+	i = 0;
+	while (i < arr->size)
+	{
+		tmp = arr->ptr[i];
+		arr->ptr[i].y = tmp.y * cos(0.1) + tmp.z * sin(0.1);
+		arr->ptr[i].z = -arr->ptr[i].y * sin(0.1) + arr->ptr[i].z * cos(0.1);
+		i++;
+	}
+	draw(arr);
+}

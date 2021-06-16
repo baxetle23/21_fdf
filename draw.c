@@ -22,6 +22,8 @@ int	deal_key(int key, t_arr	*arr)
 		draw_iso(key, arr);
 	if (key == 31)
 		off_iso(key, arr);
+	if (key == 15 || key == 14 || key == 13)
+		round_(key, arr);
 	return (0);
 }
 

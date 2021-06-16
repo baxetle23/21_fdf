@@ -34,6 +34,7 @@ typedef struct s_arr
 	int		flag_diog;
 	int		flag_point;
 	int		draw_iso;
+	int		povorot_y;
 	t_point	*ptr;
 
 	void	*img;
@@ -69,5 +70,8 @@ float	max_mod(float a, float b);
 int		ft_get_color_by_serg(int i, int r, int g, int b);
 int		get_color(int min, int max, float z);
 int		color(t_point start, t_point end, t_point current);
+void	round_(int key, t_arr *arr);
+void	round_x(int key, t_arr *arr);
+void	round_y(int key, t_arr *arr);
 
 #endif
