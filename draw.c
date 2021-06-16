@@ -64,8 +64,7 @@ void	draw_line(t_point p1, t_point p2, t_arr *arr)
 	if (arr->draw_iso == 1)
 		isometric(&p1, &p2);
 	start = p1;
-	x_step = p2.x - p1.x;
-	y_step = p2.y - p1.y;
+	get_step(&x_step, &y_step, p2, p1);
 	max = max_mod(x_step, y_step);
 	x_step /= max;
 	y_step /= max;
@@ -75,7 +74,8 @@ void	draw_line(t_point p1, t_point p2, t_arr *arr)
 	{	
 		while ((int)(p1.x - p2.x) || (int)(p1.y - p2.y))
 		{
-			mlx_pixel_put(arr->mlx_ptr, arr->win_ptr, p1.x, p1.y, color(start, p2, p1));
+			mlx_pixel_put(arr->mlx_ptr, arr->win_ptr, p1.x, p1.y,
+				color(start, p2, p1));
 			p1.x += x_step;
 			p1.y += y_step;
 		}

@@ -18,6 +18,12 @@ int	get_color(int min, int max, float z)
 		return (ft_get_color_by_serg(0, 0, 255 * z_otn, 255 - 255 * z_otn));
 }
 
+void	get_step(float *x, float *y, t_point p2, t_point p1)
+{
+	*x = p2.x - p1.x;
+	*y = p2.y - p1.y;
+}
+
 void	round_(int key, t_arr *arr)
 {
 	if (key == 15)
