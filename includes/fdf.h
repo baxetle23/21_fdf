@@ -35,6 +35,7 @@ typedef struct s_arr
 	int		flag_point;
 	int		draw_iso;
 	int		povorot_y;
+	int		color;
 	t_point	*ptr;
 
 	void	*img;
@@ -73,6 +74,7 @@ int		color(t_point start, t_point end, t_point current);
 void	round_(int key, t_arr *arr);
 void	round_x(t_arr *arr);
 void	round_y(t_arr *arr);
+void	change_color(t_arr *arr);
 void	get_step(float *x, float *y, t_point p2, t_point p1);
 
 #endif

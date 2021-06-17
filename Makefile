@@ -15,7 +15,6 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJ) $(HEDEAR)
 	$(MAKE) -C ./libft
-	cp libft/libft.a ./$(NAME)
 	gcc $(CFLAGS) $(OBJ) ./libft/libft.a -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
 re		:	fclean all

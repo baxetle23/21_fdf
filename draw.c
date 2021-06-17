@@ -24,6 +24,8 @@ int	deal_key(int key, t_arr	*arr)
 		off_iso(arr);
 	if (key == 15 || key == 14 || key == 13)
 		round_(key, arr);
+	if (key == 47)
+		change_color(arr);
 	return (0);
 }
 
