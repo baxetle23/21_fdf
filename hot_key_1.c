@@ -34,13 +34,13 @@ void	change_hight(int key, t_arr *arr)
 	draw(arr);
 }
 
-void	close_programm(int	key, t_arr *arr)
+void	close_programm(void)
 {
 	write(1, "good bye\n", 9);
 	exit (0);
 }
 
-void	delete_line(int key, t_arr *arr)
+void	delete_line(t_arr *arr)
 {
 	arr->flag_diog = 0;
 	mlx_clear_window(arr->mlx_ptr, arr->win_ptr);

@@ -27,7 +27,7 @@ void	get_step(float *x, float *y, t_point p2, t_point p1)
 void	round_(int key, t_arr *arr)
 {
 	if (key == 15)
-		round_y(key, arr);
+		round_y(arr);
 	if (key == 14)
-		round_x(key, arr);
+		round_x(arr);
 }

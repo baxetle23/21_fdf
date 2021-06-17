@@ -3,7 +3,7 @@
 int	deal_key(int key, t_arr	*arr)
 {
 	if (key == 53)
-		close_programm(key, arr);
+		close_programm();
 	if (key <= 126 && key >= 123)
 		moving(key, arr);
 	if (key == 24 || key == 27)
@@ -11,17 +11,17 @@ int	deal_key(int key, t_arr	*arr)
 	if (key == 116 || key == 121)
 		change_hight(key, arr);
 	if (key == 6)
-		delete_line(key, arr);
+		delete_line(arr);
 	if (key == 7)
-		create_line(key, arr);
+		create_line(arr);
 	if (key == 8)
-		create_point(key, arr);
+		create_point(arr);
 	if (key == 9)
-		delete_point(key, arr);
+		delete_point(arr);
 	if (key == 34)
-		draw_iso(key, arr);
+		draw_iso(arr);
 	if (key == 31)
-		off_iso(key, arr);
+		off_iso(arr);
 	if (key == 15 || key == 14 || key == 13)
 		round_(key, arr);
 	return (0);
